@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-image: linear-gradient(to bottom right, red, orange); */
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  width: 30%;
+  height: 60%;
+  background-color: black;
+  color: azure;
+  border: 4px solid white;
+  border-radius: 15px;
+}
+
+.form-container {
+  width: 100%;
+  height: 20%;
+  font-size: xx-large;
+  font-weight: bolder;
+  background-color: white;
+  color: black;
+}
+
+p {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  font-size: xx-large;
+  height: 60%;
+  text-align: center;
+}
+
+.Name,
+.Mobile {
+  height: 30%;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+
+#mobId,
+#nameId {
+  font-weight: bolder;
+  text-align: right;
+}
+
+.Mobile {
+  margin-top: 3%;
+}
+label {
+  float: left;
+  width: 42%;
+  margin-right: 3%;
+}
+
+input {
+  float: left;
+  width: 46%;
+  font-size: xx-large;
+  border: 1px solid white;
+  color: white;
+}
+
+#submitbtn {
+  display: flex;
+  width: 80%;
+  height: 35%;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+  margin-top: 8%;
+  border-radius: 15px;
+  cursor: pointer;
+}
