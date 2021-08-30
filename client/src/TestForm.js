@@ -12,14 +12,12 @@ const TestForm = () => {
     let person = {
       name: name,
       phoneNo: mobile,
-    }
+    };
     //object is getting the values
     axios
       .post("http://localhost:8000/data", person)
       .then((response) => {
-
-        console.log('ok');
-        
+        console.log(response);
       })
       .catch((error) => {
         console.log(error);

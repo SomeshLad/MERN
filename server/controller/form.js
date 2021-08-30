@@ -15,15 +15,15 @@ exports.postaddRecord = (req, res, next) => {
     .catch((err) => {
       console.log(err);
     });
+  res.send("Insertion Completed");
 };
 
 exports.getSearchedRecord = (req, res, next) => {
   const searchName = req.params.name;
   Records.findByName(searchName)
-    .then( records => {
-        res.json(records);
-    }
-    )
+    .then((records) => {
+      res.json(records);
+    })
     .catch((err) => {
       console.log(err);
     });
