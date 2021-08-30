@@ -1,8 +1,11 @@
 const Records = require("../models/records");
 
 exports.postaddRecord = (req, res, next) => {
+  console.log(req);
   const name = req.body.name;
-  const phoneNumber = req.body.phoneNumber;
+  console.log(name);
+  const phoneNumber = req.body.phoneNo;
+  console.log(phoneNumber);
   records = new Records(name, phoneNumber);
   records
     .save()

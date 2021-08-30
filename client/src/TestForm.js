@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import axios from "axios";
 const TestForm = () => {
-  let [name, setName] = useState("");
-  let [mobile, setMobile] = useState();
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState();
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
-    console.log("Name:" + name);
-    console.log("Mobile:" + mobile);
-
+    // console.log("submitted");
+    // console.log("Name:" + name);
+    // console.log("Mobile:" + mobile);
+    let person = {
+      name: name,
+      phoneNo: mobile,
+    }
+    //object is getting the values
     axios
-      .post("/retrieve:name", {
-        name: name,
-        phoneNo: mobile,
+      .post("http://localhost:8000/data", person)
+      .then((response) => {
+
+        console.log('ok');
+        
       })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
   };
