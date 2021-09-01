@@ -28,3 +28,19 @@ exports.getSearchedRecord = (req, res, next) => {
       console.log(err);
     });
 };
+
+exports.getUpdateRecord = (req, res, next) => {
+  const searchName = req.params.name;
+  const updatePhoneNo = req.params.phoneNo;
+  //this code is pending and under developement
+  const records = new Records(searchName, updatePhoneNo);
+  records
+    .updatePhonoNo()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch(err => {
+      console.log(err);
+      res.send(err);
+    });
+};
