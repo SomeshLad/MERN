@@ -35,6 +35,7 @@ class Record {
       .next()
       .then((record) => {
         console.log("The find By Id value=>>>");
+        console.log(record);
         return record;
       })
       .catch((err) => {

@@ -14,14 +14,27 @@ const TestForm = () => {
       phoneNo: mobile,
     };
     //object is getting the values
-    axios
+    /*axios post
       .post("http://localhost:8000/data", person)
       .then((response) => {
         console.log(response);
       })
       .catch((error) => {
         console.log(error);
-      });
+      });*/
+
+    //get() request
+    // axios
+    //   .get("http://localhost:8000/retrive", {
+    //     params: {
+    //       name: "Dhanshree",
+    //     },
+    //   })
+    //   .then(function (response) {
+    //     console.log(response.data);
+    //   });
+
+    //update
   };
 
   const onNameChange = (e) => {
