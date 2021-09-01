@@ -1,3 +1,7 @@
 git add .
 git commit -m "your message"
 git push origin <your branch name>
+
+
+1.git checkout main
+git pull upstream main

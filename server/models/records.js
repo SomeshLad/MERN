@@ -16,7 +16,18 @@ class Record {
     });
   }
 
-  static findByName(searchName){
+  updatePhonoNo() {
+    const db = getDb();
+    let DB;
+    DB = db
+      .collection("PersonalRecords")
+      .updateOne({ name: this.name }, { $set: this });
+    return DB.then((result) => {}).catch((err) => {
+      console.log(err);
+    });
+  }
+
+  static findByName(searchName) {
     const db = getDb();
     return db
       .collection("PersonalRecords")
@@ -30,6 +41,5 @@ class Record {
         console.log(err);
       });
   }
-
 }
 module.exports = Record;
