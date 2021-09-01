@@ -19,7 +19,8 @@ exports.postaddRecord = (req, res, next) => {
 };
 
 exports.getSearchedRecord = (req, res, next) => {
-  const searchName = req.params.name;
+  const searchName = req.query.name;
+  console.log(req.query);
   Records.findByName(searchName)
     .then((records) => {
       res.json(records);
@@ -30,16 +31,19 @@ exports.getSearchedRecord = (req, res, next) => {
 };
 
 exports.getUpdateRecord = (req, res, next) => {
-  const searchName = req.params.name;
-  const updatePhoneNo = req.params.phoneNo;
+  console.log(req);
+  const searchName = req.body.name;
+  const updatePhoneNo = req.body.phoneNo;
+
   //this code is pending and under developement
   const records = new Records(searchName, updatePhoneNo);
   records
     .updatePhonoNo()
     .then((result) => {
+      console.log(result);
       res.send(result);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.send(err);
     });
