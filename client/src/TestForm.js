@@ -34,7 +34,19 @@ const TestForm = () => {
     //     console.log(response.data);
     //   });
 
-    //update
+    //update put() request
+    const putRequest = {
+      name: "Dhanshree",
+      phoneNo: "7620698363",
+    };
+    axios
+      .put("http://localhost:8000/update", putRequest)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const onNameChange = (e) => {

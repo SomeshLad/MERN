@@ -16,13 +16,18 @@ class Record {
     });
   }
 
-  updatePhonoNo() {
+  updatePhoneNo() {
+    
+    console.log( 'inside updatePhoneNo' ,this);
+    console.log('printing this.name' , this.name);
     const db = getDb();
     let DB;
     DB = db
       .collection("PersonalRecords")
-      .updateOne({ name: this.name }, { $set: this });
-    return DB.then((result) => {}).catch((err) => {
+      .updateOne({ name: this.name }, { $set: this});
+    return DB.then((result) => {
+      
+    }).catch((err) => {
       console.log(err);
     });
   }
