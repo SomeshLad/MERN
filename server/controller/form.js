@@ -34,14 +34,13 @@ exports.getUpdateRecord = (req, res, next) => {
   console.log(req);
   const searchName = req.body.name;
   const updatePhoneNo = req.body.phoneNo;
-
+  console.log(searchName);
   //this code is pending and under developement
   const records = new Records(searchName, updatePhoneNo);
   records
-    .updatePhonoNo()
+    .updatePhoneNo()
     .then((result) => {
-      console.log(result);
-      res.send(result);
+      res.send("Phono number has been updated successfully");
     })
     .catch((err) => {
       console.log(err);
